@@ -1,9 +1,9 @@
 import tailwind from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 
-// TODO: set `site` to the real domain once DNS is pointed at GitHub Pages,
-// and add the same domain to public/CNAME.
+// Canonical domain; public/CNAME carries the same value for GitHub Pages.
 export default defineConfig({
+	site: "https://cultcap.app",
 	vite: {
 		plugins: [tailwind()],
 	},
