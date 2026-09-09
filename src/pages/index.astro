@@ -1,0 +1,82 @@
+---
+import Landing from "../layouts/Landing.astro";
+
+const title = "CultCap";
+const description =
+	"Walk around an object with a phone. Get detailed 3D a small museum can put online.";
+
+// TODO: replace with your Buttondown username once the account exists.
+const buttondownUser = "cultcap";
+---
+
+<Landing title={title} description={description}>
+	<main class="mx-auto flex max-w-3xl flex-col gap-12 px-6 py-16">
+		<header class="flex items-center gap-3">
+			<img src="/favicon.svg" alt="" width="36" height="36" />
+			<span class="text-lg font-semibold tracking-tight">CultCap</span>
+		</header>
+
+		<section class="flex flex-col gap-6">
+			<h1 class="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
+				Walk around an object with a phone. Get 3D a museum can put online.
+			</h1>
+			<p class="max-w-2xl text-lg text-[var(--muted)]">
+				Most collections hold thousands of objects and give each one a single flat
+				photograph. CultCap is a capture app and pipeline that turns a slow walk around the
+				thing into detailed 3D, cheaply enough that a regional gallery or historical society
+				could actually use it.
+			</p>
+		</section>
+
+		<!-- TODO: swap for the museum-capture hero once that capture is done. -->
+		<figure class="overflow-hidden rounded-lg bg-black">
+			<img
+				src="/hero.jpg"
+				alt="A reconstructed pair of leather shoes, rendered in 3D with the room removed."
+				class="w-full"
+				width="1600"
+				height="900"
+			/>
+			<figcaption class="px-4 py-3 text-sm text-[var(--muted)]">
+				Captured on a phone, reconstructed automatically. Work in progress.
+			</figcaption>
+		</figure>
+
+		<section class="flex flex-col gap-4 rounded-lg border border-black/10 bg-white/60 p-6">
+			<h2 class="text-xl font-semibold">Hear when there's something to see</h2>
+			<p class="text-[var(--muted)]">
+				I'm building this in the open, one object at a time. I'll email when there's a new
+				capture worth looking at, a few times a year, and never anything else.
+			</p>
+			<form
+				action={`https://buttondown.com/api/emails/embed-subscribe/${buttondownUser}`}
+				method="post"
+				class="flex flex-col gap-3 sm:flex-row"
+			>
+				<label class="sr-only" for="bd-email">Email address</label>
+				<input
+					id="bd-email"
+					name="email"
+					type="email"
+					required
+					placeholder="you@example.org"
+					class="flex-1 rounded border border-black/20 bg-white px-4 py-2"
+				/>
+				<button
+					type="submit"
+					class="rounded bg-[var(--accent)] px-5 py-2 font-medium text-white"
+				>
+					Keep me posted
+				</button>
+			</form>
+		</section>
+
+		<footer class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-[var(--muted)]">
+			<span>Made in Newcastle, Australia by John Sietsma.</span>
+			<a class="underline" href="https://johnsietsma.com/posts/cultcap-why-im-doing-this/"
+				>Why I'm doing this</a
+			>
+			<a class="underline" href="https://johnsietsma.com/tags/cultcap/">Progress notes</a>
+		</footer>
+	</main>
+</Landing>

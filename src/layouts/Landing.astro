@@ -1,0 +1,30 @@
+---
+import "../styles/global.css";
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en-AU">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="/hero.jpg" />
+		<meta property="og:type" content="website" />
+		<!-- TODO: GoatCounter. Create a second site in the GoatCounter account for this domain
+		     and put its code here, e.g. https://cultcap.goatcounter.com/count -->
+	</head>
+	<body class="min-h-screen antialiased">
+		<slot />
+	</body>
+</html>
