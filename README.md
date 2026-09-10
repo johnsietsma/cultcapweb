@@ -12,6 +12,6 @@ npm run build    # static output in dist/
 
 ## Before it goes live
 
-- `public/hero.jpg`: replace the placeholder with the museum capture.
+- Hero image: add one from the museum capture, and an `og:image` meta tag in `src/layouts/Landing.astro`.
 - Repo settings, Pages: set the custom domain and enforce HTTPS.
 - DNS: apex `A` records to GitHub Pages, `www` `CNAME` to `johnsietsma.github.io`.
