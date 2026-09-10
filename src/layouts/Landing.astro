@@ -21,8 +21,12 @@ const { title, description } = Astro.props;
 		<meta property="og:description" content={description} />
 		<meta property="og:image" content="https://cultcap.app/hero.jpg" />
 		<meta property="og:type" content="website" />
-		<!-- TODO: GoatCounter. Create a second site in the GoatCounter account for this domain
-		     and put its code here, e.g. https://cultcap.goatcounter.com/count -->
+		<!-- GoatCounter analytics: cookie-free page counts, https://cultcap.goatcounter.com -->
+		<script
+			async
+			data-goatcounter="https://cultcap.goatcounter.com/count"
+			is:inline
+			src="https://gc.zgo.at/count.js"></script>
 	</head>
 	<body class="min-h-screen antialiased">
 		<slot />
