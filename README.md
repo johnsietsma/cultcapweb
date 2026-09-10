@@ -12,7 +12,6 @@ npm run build    # static output in dist/
 
 ## Before it goes live
 
-- `src/pages/index.astro`: set `buttondownUser` to the Buttondown account name.
 - `src/layouts/Landing.astro`: add the GoatCounter snippet for this domain.
 - `public/hero.jpg`: replace the placeholder with the museum capture.
 - Repo settings, Pages: set the custom domain and enforce HTTPS.
